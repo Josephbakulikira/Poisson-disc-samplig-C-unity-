@@ -47,7 +47,8 @@ public static class Poisson
         spawn_samples.Add(grid_size / 2);
         while (spawn_samples.Count > 0)
         {
-            int index = Random.Range(0, spawn_samples.Count);
+            //int index = Random.Range(0, spawn_samples.Count);
+            int index = spawn_samples.Count - 1;
             Vector2 current_spawn_sample = spawn_samples[index];
             bool rejected_sample = true;
             for (int i = 0; i < k; i++)
